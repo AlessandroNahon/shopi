@@ -31,6 +31,7 @@ export default function Edit(): ReactElement {
 			})
 		})
 
+		// Use a function to avoid re-renders caused by dependency changes
 		setPageData((prevPageData) => ({
 			...prevPageData,
 			...newPageData,
