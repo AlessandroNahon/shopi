@@ -64,23 +64,21 @@ export default function Picker(): ReactElement {
 				</div>
 			</button>
 			{open && (
-				<form className='grid grid-rows-2 gap-y-4 absolute right-2 top-14 bg-stone-900 border-white border-[1px] rounded w-60 h-60 p-2 shadow-[0_10px_25px_rgba(8,_112,_184,_0.7)]'>
-					<div>
-						{sections.map((s) => (
-							<div className='w-full py-1 hover:text-slate-400' key={s.name}>
-								<label className='cursor-pointer w-full flex'>
-									<input
-										checked={template.some((t) => t.name === s.name)}
-										onChange={() => handleCheckboxChange(s.name)}
-										type='checkbox'
-										className='relative bottom-[-2px] last:appearance-none w-5 h-5 bg-transparent checked:bg-green-600 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-green-600'
-										value={s.name}
-									/>
-									<p className='pl-2 inline-block w-full'>{s.name}</p>
-								</label>
-							</div>
-						))}
-					</div>
+				<form className='absolute right-2 top-14 bg-stone-900 border-white border-[1px] rounded w-60 h-60 p-2 shadow-[0_10px_25px_rgba(8,_112,_184,_0.7)]'>
+					{sections.map((s) => (
+						<div className='w-full py-1 hover:text-slate-400' key={s.name}>
+							<label className='cursor-pointer w-full flex'>
+								<input
+									checked={template.some((t) => t.name === s.name)}
+									onChange={() => handleCheckboxChange(s.name)}
+									type='checkbox'
+									className='relative bottom-[-2px] last:appearance-none w-5 h-5 bg-transparent checked:bg-green-600 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-green-600'
+									value={s.name}
+								/>
+								<p className='pl-2 inline-block w-full'>{s.name}</p>
+							</label>
+						</div>
+					))}
 				</form>
 			)}
 		</div>
