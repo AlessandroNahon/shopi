@@ -1,0 +1,18 @@
+{
+	"name": "Conversion",
+	"type": "Section",
+	"components": [
+		{
+			"name": "Title",
+			"type": "string",
+			"defaultValue": "Conversion Title",
+			"atom": "conversionTitleAtom"
+		},
+		{
+			"name": "Button Text",
+			"type": "string",
+			"defaultValue": "Conversion Button",
+			"atom": "conversionButtonAtom"
+		}
+	]
+}
